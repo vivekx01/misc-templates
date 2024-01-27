@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evergreen Medical Center - Departments</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css">
+  <style>
+    .search-results {
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #06B6D4;
+      padding: 20px;
+      color: #FFFFFF;
+      text-align: center;
+    }
+    
+    /* Custom Styles */
+    .search-container {
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 9999px;
+      background-color: #FFFFFF;
+      color: #1F2937;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .search-input:focus {
+      box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.5);
+    }
+
+    .search-icon {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      color: #9CA3AF;
+    }
+
+  </style>
+</head>
+
+<body class="bg-green-100">
+  <!-- Navigation -->
+  <nav class="bg-green-600 py-4">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <div>
+        <a href="#" class="text-white text-2xl font-bold">Evergreen Medical Center</a>
+      </div>
+      <div class="space-x-4">
+        <a href="aboutus.html" class="hidden md:inline-block text-white hover:text-gray-200">About us</a>
+        <a href="#departments" class="hidden md:inline-block text-white hover:text-gray-200">Departments</a>
+        <a href="#services" class="hidden md:inline-block text-white hover:text-gray-200">Services</a>
+        <a href="#doctors" class="hidden md:inline-block text-white hover:text-gray-200">Doctors and Staff</a>
+        <a href="#patient-info" class="hidden md:inline-block text-white hover:text-gray-200">Patient Info and Support</a>
+        <a href="#contact" class="hidden md:inline-block text-white hover:text-gray-200">Contact us</a>
+        <button type="button" class="md:hidden text-white hover:text-gray-200 focus:outline-none" id="mobileMenuBtn">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24">
+            <path class="fill-current text-white" d="M19 13H5v-2h14v2zm0 4H5v-2h14v2zm0-8H5V7h14v2z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="hidden md:hidden bg-green-600" id="mobileMenu">
+      <div class="px-2 pt-2 pb-3 sm:px-3">
+        <a href="aboutus.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">About us</a>
+        <a href="#departments" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Departments</a>
+        <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Services</a>
+        <a href="#doctors" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Doctors and Staff</a>
+        <a href="#patient-info" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Patient Info and Support</a>
+        <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Contact us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 py-8">
+    <h2 class="text-3xl font-bold mb-6 text-center">Departments</h2>
+    <div class="flex justify-center mb-6 search-container">
+      <input type="text" id="searchInput" class="search-input" placeholder="Search departments...">
+      
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Department cards here -->
+      <div class="bg-white shadow-lg rounded-lg p-6">
+        <h3 class="text-xl font-bold mb-4">Cardiology</h3>
+        <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis odio ut felis efficitur fermentum. Ut ullamcorper enim ac nisi egestas, a malesuada urna feugiat. Mauris vel tincidunt ante.</p>
+        <p class="text-gray-700 mt-4">Department Head: Dr. John Doe</p>
+        <p class="text-gray-700">Contact: (123) 456-7890</p>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg p-6">
+        <h3 class="text-xl font-bold mb-4">Neurology</h3>
+        <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis odio ut felis efficitur fermentum. Ut ullamcorper enim ac nisi egestas, a malesuada urna feugiat. Mauris vel tincidunt ante.</p>
+        <p class="text-gray-700 mt-4">Department Head: Dr. Jane Smith</p>
+        <p class="text-gray-700">Contact: (123) 456-7890</p>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg p-6">
+        <h3 class="text-xl font-bold mb-4">Pediatrics</h3>
+        <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis odio ut felis efficitur fermentum. Ut ullamcorper enim ac nisi egestas, a malesuada urna feugiat. Mauris vel tincidunt ante.</p>
+        <p class="text-gray-700 mt-4">Department Head: Dr. Emily Johnson</p>
+        <p class="text-gray-700">Contact: (123) 456-7890</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-green-600 py-6">
+    <div class="container mx-auto text-center text-white">
+      <p>&copy; 2023 Evergreen Medical Center. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("mobileMenuBtn").addEventListener("click", function () {
+      var mobileMenu = document.getElementById("mobileMenu");
+      if (mobileMenu.style.display === "block") {
+        mobileMenu.style.display = "none";
+      } else {
+        mobileMenu.style.display = "block";
+      }
+    });
+
+    var searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('input', function () {
+      var searchValue = searchInput.value.toLowerCase();
+      var departmentCards = document.querySelectorAll('.grid > div');
+      departmentCards.forEach(function (card) {
+        var departmentName = card.querySelector('h3').textContent.toLowerCase();
+        if (departmentName.includes(searchValue)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

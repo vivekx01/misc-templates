@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evergreen Medical Center - Doctors and Staff</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css">
+  <style>
+    footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #06B6D4;
+      padding: 20px;
+      color: #FFFFFF;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body class="bg-green-100">
+  <!-- Navigation -->
+  <nav class="bg-green-600 py-4">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <div>
+        <a href="#" class="text-white text-2xl font-bold">Evergreen Medical Center</a>
+      </div>
+      <div class="space-x-4">
+        <a href="aboutus.html" class="hidden md:inline-block text-white hover:text-gray-200">About us</a>
+        <a href="#departments" class="hidden md:inline-block text-white hover:text-gray-200">Departments</a>
+        <a href="#services" class="hidden md:inline-block text-white hover:text-gray-200">Services</a>
+        <a href="#doctors" class="hidden md:inline-block text-white hover:text-gray-200">Doctors and Staff</a>
+        <a href="#patient-info" class="hidden md:inline-block text-white hover:text-gray-200">Patient Info and Support</a>
+        <a href="#contact" class="hidden md:inline-block text-white hover:text-gray-200">Contact us</a>
+        <button type="button" class="md:hidden text-white hover:text-gray-200 focus:outline-none" id="mobileMenuBtn">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24">
+            <path class="fill-current text-white" d="M19 13H5v-2h14v2zm0 4H5v-2h14v2zm0-8H5V7h14v2z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="hidden md:hidden bg-green-600" id="mobileMenu">
+      <div class="px-2 pt-2 pb-3 sm:px-3">
+        <a href="aboutus.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">About us</a>
+        <a href="#departments" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Departments</a>
+        <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Services</a>
+        <a href="#doctors" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Doctors and Staff</a>
+        <a href="#patient-info" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Patient Info and Support</a>
+        <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Contact us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container mx-auto py-8 px-4">
+    <h1 class="text-3xl font-bold mb-6">Doctors and Staff</h1>
+
+    <!-- Search Form -->
+    <form id="searchForm" class="mb-6">
+      <div class="flex items-center">
+        <input type="text" id="searchInput" placeholder="Search by name, specialization, or department"
+          class="border border-gray-300 rounded-l-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-green-500 flex-grow">
+        <button type="submit" id="searchButton"
+          class="bg-green-500 text-white py-2 px-4 rounded-r-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-600">Search</button>
+      </div>
+    </form>
+
+    <!-- Doctors and Staff List -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Doctor/Staff Card -->
+      <div class="bg-white rounded-lg shadow-md p-4">
+        <h2 class="text-lg font-bold">Dr. John Doe</h2>
+        <p class="text-sm text-gray-600">Qualifications: MBBS, MD</p>
+        <p class="text-sm text-gray-600">Specialization: Cardiology</p>
+        <p class="text-sm text-gray-600">Experience: 10 years</p>
+        <p class="text-sm text-gray-600">Contact: johndoe@example.com</p>
+      </div>
+
+      <!-- Repeat the above card for other doctors and staff members -->
+      <!-- Add more cards here -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-green-600 py-6">
+    <div class="container mx-auto text-center text-white">
+      <p>&copy; 2023 Evergreen Medical Center. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("mobileMenuBtn").addEventListener("click", function () {
+      var mobileMenu = document.getElementById("mobileMenu");
+      if (mobileMenu.style.display === "block") {
+        mobileMenu.style.display = "none";
+      } else {
+        mobileMenu.style.display = "block";
+      }
+    });
+
+    document.getElementById("searchForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      var searchQuery = document.getElementById("searchInput").value.toLowerCase();
+      var doctorCards = document.querySelectorAll(".grid .bg-white");
+
+      doctorCards.forEach(function (card) {
+        var doctorName = card.querySelector("h2").innerText.toLowerCase();
+        var doctorSpecialization = card.querySelectorAll("p")[1].innerText.toLowerCase();
+        var doctorDepartment = card.querySelectorAll("p")[2].innerText.toLowerCase();
+
+        if (
+          doctorName.includes(searchQuery) ||
+          doctorSpecialization.includes(searchQuery) ||
+          doctorDepartment.includes(searchQuery)
+        ) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

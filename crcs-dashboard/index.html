@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRCS Portal Dashboard</title>
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/MSCS_LOGO.png" alt="logo" class="d-inline-block align-text-top">
+        CRCS Dashboard
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="search.html">Search Societies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Registration</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">MSCS Act</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row mt-2">
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="card-header">Recent Registrations</div>
+          <div class="card-body">
+            <h5 class="card-title">Total Societies Registered: <span id="totalSocieties"></span></h5>
+            <h6 class="card-subtitle mb-2 text-muted">Most Recent Registrations:</h6>
+            <ul id="recentRegistrations" class="list-group">
+              <!-- Recent registrations will be dynamically populated here -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="card-header">Sector Trends</div>
+          <div class="card-body">
+            <canvas id="sectorChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <div class="card h-100">
+          <div class="card-header">State Trends: Societies</div>
+          <div class="card-body">
+            <canvas id="stateChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="card-header">Filter Options</div>
+          <div class="card-body">
+            <label for="stateSelect">Select State:</label>
+            <select id="stateSelect" class="form-control">
+              <!-- State options will be dynamically populated here -->
+            </select>
+            <label for="districtSelect" class="mt-3">Select District:</label>
+            <select id="districtSelect" class="form-control">
+              <!-- District options will be dynamically populated here based on the selected state -->
+            </select>
+            <p class="mt-5 text-center">Total registrations in selected district: <span id="districtTotal"></span></p>
+            <p class="mt-3">Area of Operation Places of Societies Registered:</p>
+            <ul id="areaOfOperationList"></ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="card-header">District Trends Chart : By Sector</div>
+          <div class="card-body">
+            <div class="chart-container">
+              <canvas id="districtChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <div class="card h-100">
+          <div class="card-header">Annual Registration Trends</div>
+          <div class="card-body">
+            <label for="yearSelect">Select Year:</label>
+            <select id="yearSelect" class="form-control">
+              <!-- Year options will be dynamically populated here -->
+            </select>
+            <canvas id="registrationChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer mt-3">
+    &copy; 2023 CRCS Portal. All rights reserved.
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.7.0.slim.js"
+    integrity="sha256-7GO+jepT9gJe9LB4XFf8snVOjX3iYNb0FHYr5LI1N5c=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+  <script src="js/dummyData.js"></script>
+  <script src="js/card1.js"></script>
+  <script src="js/card2.js"></script>
+  <script src="js/card3.js"></script>
+  <script src="js/card4.js"></script>
+  <script src="js/card5.js"></script>
+  <script src="js/card6.js"></script>
+
+
+
+
+</body>
+
+</html>

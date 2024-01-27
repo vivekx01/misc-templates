@@ -1,0 +1,44 @@
+.search-bar {
+    border: 2px solid black;
+  }
+
+  .search-button {
+    background-color: black;
+    color: white;
+  }
+  .navbar {
+    background-color: #000;
+  }
+
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-brand img {
+    max-height: 40px;
+    margin-right: 10px;
+  }
+
+  .navbar-link {
+    font-size: 18px;
+    color: #fff;
+  }
+  .navbar-nav .nav-link:hover {
+    color: white !important;
+  }
+  .navbar-brand:hover,
+    .navbar-brand:hover img {
+      color: white !important;
+      filter: brightness(100%);
+    }
+  .footer {
+    background-color: #000;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+  }

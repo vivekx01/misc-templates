@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evergreen Medical Center - Cardiology Department</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css">
+  <style>
+    footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #06B6D4;
+      padding: 20px;
+      color: #FFFFFF;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body class="bg-green-100">
+  <!-- Navigation -->
+  <nav class="bg-green-600 py-4">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <div>
+        <a href="#" class="text-white text-2xl font-bold">Evergreen Medical Center</a>
+      </div>
+      <div class="space-x-4">
+        <a href="aboutus.html" class="hidden md:inline-block text-white hover:text-gray-200">About us</a>
+        <a href="#departments" class="hidden md:inline-block text-white hover:text-gray-200">Departments</a>
+        <a href="#services" class="hidden md:inline-block text-white hover:text-gray-200">Services</a>
+        <a href="#doctors" class="hidden md:inline-block text-white hover:text-gray-200">Doctors and Staff</a>
+        <a href="#patient-info" class="hidden md:inline-block text-white hover:text-gray-200">Patient Info and Support</a>
+        <a href="#contact" class="hidden md:inline-block text-white hover:text-gray-200">Contact us</a>
+        <button type="button" class="md:hidden text-white hover:text-gray-200 focus:outline-none" id="mobileMenuBtn">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24">
+            <path class="fill-current text-white" d="M19 13H5v-2h14v2zm0 4H5v-2h14v2zm0-8H5V7h14v2z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="hidden md:hidden bg-green-600" id="mobileMenu">
+      <div class="px-2 pt-2 pb-3 sm:px-3">
+        <a href="aboutus.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">About us</a>
+        <a href="#departments" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Departments</a>
+        <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Services</a>
+        <a href="#doctors" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Doctors and Staff</a>
+        <a href="#patient-info" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Patient Info and Support</a>
+        <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Contact us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 py-8">
+    <h2 class="text-3xl font-bold mb-6">Cardiology Department</h2>
+    <div class="bg-white shadow-lg rounded-lg p-6">
+      <h3 class="text-xl font-bold mb-4">Services</h3>
+      <ul class="list-disc list-inside">
+        <li>Diagnosis and treatment of heart diseases</li>
+        <li>Echocardiography and stress tests</li>
+        <li>Cardiac catheterization and angioplasty</li>
+        <li>Electrocardiogram (ECG) and Holter monitoring</li>
+        <li>Pacemaker implantation and monitoring</li>
+        <li>Cardiac rehabilitation programs</li>
+      </ul>
+      <h3 class="text-xl font-bold mt-8 mb-4">Department Head</h3>
+      <p class="text-gray-700">Dr. John Doe</p>
+      <p class="text-gray-700">Contact: (123) 456-7890</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-green-600 py-6">
+    <div class="container mx-auto text-center text-white">
+      <p>&copy; 2023 Evergreen Medical Center. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("mobileMenuBtn").addEventListener("click", function () {
+      var mobileMenu = document.getElementById("mobileMenu");
+      if (mobileMenu.style.display === "block") {
+        mobileMenu.style.display = "none";
+      } else {
+        mobileMenu.style.display = "block";
+      }
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evergreen Medical Center - FAQs</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css">
+</head>
+
+<body class="bg-green-100">
+  <!-- Navigation -->
+  <nav class="bg-green-600 py-4">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <div>
+        <a href="#" class="text-white text-2xl font-bold">Evergreen Medical Center</a>
+      </div>
+      <div class="space-x-4">
+        <a href="aboutus.html" class="hidden md:inline-block text-white hover:text-gray-200">About us</a>
+        <a href="#departments" class="hidden md:inline-block text-white hover:text-gray-200">Departments</a>
+        <a href="#services" class="hidden md:inline-block text-white hover:text-gray-200">Services</a>
+        <a href="#doctors" class="hidden md:inline-block text-white hover:text-gray-200">Doctors and Staff</a>
+        <a href="#patient-info" class="hidden md:inline-block text-white hover:text-gray-200">Patient Info and Support</a>
+        <a href="#contact" class="hidden md:inline-block text-white hover:text-gray-200">Contact us</a>
+        <button type="button" class="md:hidden text-white hover:text-gray-200 focus:outline-none" id="mobileMenuBtn">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24">
+            <path class="fill-current text-white" d="M19 13H5v-2h14v2zm0 4H5v-2h14v2zm0-8H5V7h14v2z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="hidden md:hidden bg-green-600" id="mobileMenu">
+      <div class="px-2 pt-2 pb-3 sm:px-3">
+        <a href="aboutus.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">About us</a>
+        <a href="#departments" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Departments</a>
+        <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Services</a>
+        <a href="#doctors" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Doctors and Staff</a>
+        <a href="#patient-info" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Patient Info and Support</a>
+        <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Contact us</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Content -->
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-4">Frequently Asked Questions</h1>
+
+    <section id="faq" class="mb-8">
+      <h2 class="text-2xl font-bold mb-2">General Questions</h2>
+      <ul class="list-disc pl-6">
+        <li>
+          <h3 class="text-xl font-bold">Q: What are your working hours?</h3>
+          <p>A: We are open from Monday to Friday, 9:00 AM to 8:00 PM.</p>
+        </li>
+        <li>
+          <h3 class="text-xl font-bold">Q: How can I book an appointment?</h3>
+          <p>A: You can book an appointment by calling our helpline at <a href="tel:+123456789">+1 (234) 567-89</a> or by using our online booking system.</p>
+        </li>
+        <li>
+          <h3 class="text-xl font-bold">Q: What insurance plans do you accept?</h3>
+          <p>A: We accept a wide range of insurance plans. Please bring your insurance card and valid identification for verification.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="billing" class="mb-8">
+      <h2 class="text-2xl font-bold mb-2">Billing and Payments</h2>
+      <ul class="list-disc pl-6">
+        <li>
+          <h3 class="text-xl font-bold">Q: How can I pay my medical bills?</h3>
+          <p>A: We accept various payment methods, including cash, credit cards, and online payment platforms. You can pay your bills at our billing counter or through our online payment portal.</p>
+        </li>
+        <li>
+          <h3 class="text-xl font-bold">Q: Can I set up a payment plan for my medical expenses?</h3>
+          <p>A: Yes, we offer payment plans for eligible patients. Please contact our billing department to discuss your options.</p>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-green-600 py-6">
+    <div class="container mx-auto text-center text-white">
+      <p>&copy; 2023 Evergreen Medical Center. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("mobileMenuBtn").addEventListener("click", function () {
+      var mobileMenu = document.getElementById("mobileMenu");
+      if (mobileMenu.style.display === "block") {
+        mobileMenu.style.display = "none";
+      } else {
+        mobileMenu.style.display = "block";
+      }
+    });
+  </script>
+</body>
+
+</html>

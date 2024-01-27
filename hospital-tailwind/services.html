@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evergreen Medical Center - Services</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css">
+  <style>
+    .service-card {
+      transition: transform 0.2s;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-4px);
+    }
+    
+    
+  </style>
+</head>
+
+<body class="bg-green-100">
+  <!-- Navigation -->
+  <nav class="bg-green-600 py-4">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <div>
+        <a href="#" class="text-white text-2xl font-bold">Evergreen Medical Center</a>
+      </div>
+      <div class="space-x-4">
+        <a href="aboutus.html" class="hidden md:inline-block text-white hover:text-gray-200">About us</a>
+        <a href="#departments" class="hidden md:inline-block text-white hover:text-gray-200">Departments</a>
+        <a href="#services" class="hidden md:inline-block text-white hover:text-gray-200">Services</a>
+        <a href="#doctors" class="hidden md:inline-block text-white hover:text-gray-200">Doctors and Staff</a>
+        <a href="#patient-info" class="hidden md:inline-block text-white hover:text-gray-200">Patient Info and Support</a>
+        <a href="#contact" class="hidden md:inline-block text-white hover:text-gray-200">Contact us</a>
+        <button type="button" class="md:hidden text-white hover:text-gray-200 focus:outline-none" id="mobileMenuBtn">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24">
+            <path class="fill-current text-white" d="M19 13H5v-2h14v2zm0 4H5v-2h14v2zm0-8H5V7h14v2z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="hidden md:hidden bg-green-600" id="mobileMenu">
+      <div class="px-2 pt-2 pb-3 sm:px-3">
+        <a href="aboutus.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">About us</a>
+        <a href="#departments" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Departments</a>
+        <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Services</a>
+        <a href="#doctors" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Doctors and Staff</a>
+        <a href="#patient-info" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Patient Info and Support</a>
+        <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200">Contact us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Services Section -->
+  <section id="services" class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-semibold mb-8">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Diagnostics Service -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-md service-card">
+          <img src="img/diagnostics.jpg" alt="Diagnostics" class="w-100 h-50">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-4">Diagnostics</h3>
+            <p class="text-gray-700 mb-4">Our Diagnostics department offers a wide range of medical tests and imaging services to aid in accurate diagnoses. We have state-of-the-art equipment and skilled professionals to ensure precise results.</p>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="text-blue-500 font-semibold underline" target="_blank">Watch Video</a>
+          </div>
+        </div>
+        
+        <!-- Surgeries Service -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-md service-card">
+          <img src="img/surgeries.jpg" alt="Surgeries" class="w-100 h-50">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-4">Surgeries</h3>
+            <p class="text-gray-700 mb-4">Our highly skilled team of surgeons specializes in various surgical procedures, ranging from minimally invasive to complex surgeries. We utilize advanced techniques and technologies to ensure successful outcomes for our patients.</p>
+            <a href="https://www.youtube.com/watch?v=oHg5SJYRHA0" class="text-blue-500 font-semibold underline" target="_blank">Watch Video</a>
+          </div>
+        </div>
+        
+        <!-- Emergency Care Service -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-md service-card">
+          <img src="img/emergency.jpg" alt="Emergency Care" class="w-100 h-50">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-4">Emergency Care</h3>
+            <p class="text-gray-700 mb-4">Our Emergency Care department operates 24/7 to provide immediate medical assistance in critical situations. Our dedicated team of emergency medical professionals ensures timely and efficient care for patients requiring urgent attention.</p>
+            <a href="https://www.youtube.com/watch?v=9bZkp7q19f0" class="text-blue-500 font-semibold underline" target="_blank">Watch Video</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-600 py-6">
+    <div class="container mx-auto text-center text-white">
+      <p>&copy; 2023 Evergreen Medical Center. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("mobileMenuBtn").addEventListener("click", function () {
+      var mobileMenu = document.getElementById("mobileMenu");
+      if (mobileMenu.style.display === "block") {
+        mobileMenu.style.display = "none";
+      } else {
+        mobileMenu.style.display = "block";
+      }
+    });
+
+    var searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('input', function () {
+      var searchValue = searchInput.value.toLowerCase();
+      var departmentCards = document.querySelectorAll('.grid > div');
+      departmentCards.forEach(function (card) {
+        var departmentName = card.querySelector('h3').textContent.toLowerCase();
+        if (departmentName.includes(searchValue)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
